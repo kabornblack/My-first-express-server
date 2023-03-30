@@ -18,7 +18,11 @@ app.get("/about", function(req, res){
 
 app.get("/hobbies", function(req, res){
   res.send("<ul><li>Coffee</li><li>code</li></ul>")
-})
+});
+
+app.get("/love", function(req, res){
+  res.send("What is love or what we do for love")
+});
 
 app.listen(3000, function(){
   console.log("Server started on port 3000")

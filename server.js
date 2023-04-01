@@ -9,7 +9,7 @@ app.get("/", function(req, res){
 });
 
 app.get("/contact", function(req, res){
-  res.send("Contact me at 12345654 or kabornblack@gmail.com");
+  res.send("Contact me at 12345654 or kabornblack@gmail.com, email is fine if you need anything else");
 });
 
 app.get("/about", function(req, res){

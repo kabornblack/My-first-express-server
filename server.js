@@ -5,7 +5,28 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-app.use(bodyParser.urlencoded({encoded=true}));
+app.use(bodyParser.urlencoded({extended: true}));
+
+function example() {
+  var a = 1;
+  let b = 2;
+  const c = 3;
+
+  if (true) {
+    var a = 4; // reassigns the value of a
+    let b = 5; // declares a new variable b with block-level scope
+    const c = 6; // declares a new constant c with block-level scope
+  }
+
+  console.log(a); // outputs 4
+  console.log(b); // outputs 2
+  console.log(c); // outputs 3
+}
+
+example();
+
+
+
 
 app.get("/", function(req, res){
   res.send("<h1>Hello, World!</h1>");

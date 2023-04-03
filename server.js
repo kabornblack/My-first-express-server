@@ -28,7 +28,7 @@ function example() {
 example();
 
 app.get("/", function(req, res){
-  res.send("<h1>Hello, World!</h1>");
+  res.send(__dirname + "index.html");
 });
 
 app.get("/contact", function(req, res){

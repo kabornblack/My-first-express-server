@@ -9,10 +9,6 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-
-app.get("/", function(req, res){
-  res.send("<h1>Hello, World!</h1>");
-});
 function example() {
   var a = 1;
   let b = 2;
@@ -30,6 +26,10 @@ function example() {
 }
 
 example();
+
+app.get("/", function(req, res){
+  res.send("<h1>Hello, World!</h1>");
+});
 
 app.get("/contact", function(req, res){
   res.send("Contact me at 12345654 or kabornblack@gmail.com, email is fine if you need anything else");
